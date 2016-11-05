@@ -13,4 +13,7 @@ box/
 
 .DS_Store
 .bundle
+<<<<<<< HEAD
 *.orig
+=======
+>>>>>>> efb623d4eca7a3ba7f484faffd55e99b3abf67c2

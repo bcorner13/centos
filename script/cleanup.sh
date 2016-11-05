@@ -1,5 +1,8 @@
 #!/bin/bash -eux
 
+echo "==> Clear out machine id"
+rm -f /etc/machine-id
+
 echo "==> Cleaning up temporary network addresses"
 # Make sure udev doesn't block our network
 if grep -q -i "release 6" /etc/redhat-release ; then
@@ -66,9 +69,12 @@ if [ $(ls | wc -w) -gt 16 ]; then
 fi
 popd
 
+<<<<<<< HEAD
 #echo "==> Remove packages needed for building guest tools"
 #yum -y remove gcc cpp libmpc mpfr kernel-devel kernel-headers perl
 
+=======
+>>>>>>> efb623d4eca7a3ba7f484faffd55e99b3abf67c2
 echo "==> Clean up yum cache of metadata and packages to save space"
 yum -y --enablerepo='*' clean all
 
